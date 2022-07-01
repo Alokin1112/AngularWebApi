@@ -1,0 +1,9 @@
+<mat-card aTilt class="Wrapper" [tiltSettings]="tiltSettings">
+  <mat-card-title>
+    {{ film.name }}
+  </mat-card-title>
+  <img mat-card-image [src]="getImage()" class="Image" />
+  <mat-card-subtitle (click)="changeSummaryLenght()" class="Clickable">
+    {{ getSummary() }}
+  </mat-card-subtitle>
+</mat-card>

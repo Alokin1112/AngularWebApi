@@ -1,0 +1,7 @@
+<div class="filmsWrapper">
+  <film
+    *ngFor="let film of films"
+    [film]="film"
+    [maxSummaryLength]="getMaxSummaryLength()"
+  ></film>
+</div>
