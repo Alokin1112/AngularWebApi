@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./film.component.scss'],
 })
 export class FilmComponent implements OnInit {
-  constructor() {}
+  constructor(private router: ActivatedRoute) {}
   @Input() film: any;
   @Input() maxSummaryLength: number;
   longSummary: boolean = false;

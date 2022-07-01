@@ -1,6 +1,8 @@
 .Wrapper{
     margin: 10px;
     max-width: 30vw;
+    max-width: 350px;
+    align-content: center;
     transition: background-color .5s ease-in-out;
     &:hover{
         background-color:#363636;
@@ -9,11 +11,5 @@
 .Clickable{
     &:hover{
         cursor: pointer;
-    }
-}
-.Image{}
-@media (max-width:768px){
-    .Wrapper{
-        max-width: 70vw;
     }
 }

@@ -7,9 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/home/home.module').then((m) => m.HomeModule),
   },
-  { path: 'search', loadChildren: () => import('./components/search/search.module').then(m => m.SearchModule) },
-  { path: 'search', loadChildren: () => import('./components/search/search.module').then(m => m.SearchModule) },
-
+  {
+    path: ':id',
+    loadChildren: () =>
+      import('./components/single-film/single-film.module').then(
+        (m) => m.SingleFilmModule
+      ),
+  },
   {
     path: '**',
     redirectTo: 'home',

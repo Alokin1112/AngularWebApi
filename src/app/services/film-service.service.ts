@@ -11,4 +11,16 @@ export class FilmServiceService {
     const request = `${apiURL}${name}`;
     return this._http.get(request);
   }
+  getSingleFilm(id: number) {
+    const request = `https://api.tvmaze.com/shows/${id}`;
+    return this._http.get(request);
+  }
+  getCast(id: number) {
+    const request = `https://api.tvmaze.com/shows/${id}/cast`;
+    return this._http.get(request);
+  }
+  getEpisodes(id: number) {
+    const request: string = `https://api.tvmaze.com/shows/${id}/episodes`;
+    return this._http.get(request);
+  }
 }
